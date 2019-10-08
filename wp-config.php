@@ -37,7 +37,7 @@ define( 'DB_COLLATE', '' );
 
 /* Aviod asking for ftp credentials for installation */
 
-define( "FS_METHOD", "direct" ); 
+define( 'FS_METHOD', 'direct' ); 
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -53,8 +53,6 @@ define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /* The value of WPSalts come from the script */
-
-$WPSalts
 
 /**#@-*/
 
