@@ -6,7 +6,7 @@ echo "**********************************************"
 echo "Welcome to Automated installation of Wordpress"
 echo "**********************************************"
 echo "Date and Time:" $(date +%F_%R)
-echo "Sever Uptime is :" && uptime
+echo "Sever Uptime is:" && uptime
 sleep 2
 echo "This Script install Wordpress automatically by creating a new database."
 echo "This script assumes that Mysql 5.6 db on Debian9."
@@ -27,7 +27,7 @@ else
      exit 1
 fi
 sleep 1
-apt-get install netstat wget zip unzip netstat curl git pv net-tools ed expect -y 
+apt-get install net-tools wget zip unzip curl git pv ed expect -y 
 echo "---------------------------------------------------"
 echo "Server Information"
 echo "----------------------------------------------------"
