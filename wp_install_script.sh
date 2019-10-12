@@ -103,8 +103,8 @@ sleep 1
 curl -O https://wordpress.org/latest.tar.gz
 echo "Downloading ....................................."
 echo "      "
-#tar -xf latest.tar.gz
-pv latest.tar.gz | tar xzf - -C .
+tar -xf latest.tar.gz
+#pv latest.tar.gz | tar xzf - -C .
 cd wordpress
 cp -rf . ..
 cd ..
