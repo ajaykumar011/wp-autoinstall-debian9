@@ -20,12 +20,13 @@
 #define( 'FORCE_SSL_ADMIN', true);
 
 /* Cache Settings */
+
 #define('WP_CACHE', true);      // enable the cache
 #define('ENABLE_CACHE', true);  // enable the cache
 #define('CACHE_EXPIRATION_TIME', 3600); // in seconds
 
-/* Daabase configuration starts here */
-/** MySQL database Database */
+/* Database configuration starts here */
+/** MySQL database Database ***/
 
 define( 'DB_NAME', 'database_name_here' );
 
