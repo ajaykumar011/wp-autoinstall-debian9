@@ -126,11 +126,8 @@ perl -pi -e "s/username_here/$dbuser/g" wp-config.php
 perl -pi -e "s/password_here/$dbpass/g" wp-config.php
 
 #Salt configuration section
-
-SALT=$(curl -L https://api.wordpress.org/secret-key/1.1/salt/)
-STRING='put your unique phrase here'
-printf '%s\n' "g/$STRING/d" a "$SALT" . w | ed -s wp-config.php
-
+chmod +x salt.sh
+sh salt.sh
 
 echo "<?php phpinfo();?>" > $webroot/info.php
 echo "We are implementing the permission ftpuser:www-data for /var/www folder"
