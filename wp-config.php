@@ -11,16 +11,21 @@
 #define( 'FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
 #define( 'FS_CHMOD_FILE', ( 0644 & ~ umask() ) );
 #define( 'WP_ALLOW_REPAIR', true );
-#define( 'FORCE_SSL_ADMIN', true );
+#define( 'CONCATENATE_SCRIPTS', false );
+
+/* UPdate Wordpress Settings */
 #define( 'AUTOMATIC_UPDATER_DISABLED', true );
 #define( 'WP_AUTO_UPDATE_CORE', false );
-#define( 'WP_CACHE', true);
 #define( 'FORCE_SSL_LOGIN', true);
 #define( 'FORCE_SSL_ADMIN', true);
-#define( 'CONCATENATE_SCRIPTS', false );
-#define( 'SCRIPT_DEBUG', true );
+
+/* Cache Settings */
+#define('WP_CACHE', true);      // enable the cache
+#define('ENABLE_CACHE', true);  // enable the cache
+#define('CACHE_EXPIRATION_TIME', 3600); // in seconds
 
 /* Daabase configuration starts here */
+/** MySQL database Database */
 
 define( 'DB_NAME', 'database_name_here' );
 
@@ -82,6 +87,7 @@ $table_prefix = 'wpr_';
  */
 define( 'WP_DEBUG', true );
 define( "WP_DEBUG_LOG", true ); 
+#define( 'SCRIPT_DEBUG', true );
 
 /* That's all, stop editing! Happy publishing. */
 
