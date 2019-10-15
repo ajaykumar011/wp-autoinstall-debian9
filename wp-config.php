@@ -4,9 +4,9 @@
 /** The name of the database for WordPress */
 
 #define( 'ALTERNATE_WP_CRON', true );
-#define('DISABLE_WP_CRON', 'true');
-#define('WP_CRON_LOCK_TIMEOUT', 900);
-#define('AUTOSAVE_INTERVAL', 300);
+#define( 'DISABLE_WP_CRON', 'true');
+#define( 'WP_CRON_LOCK_TIMEOUT', 900);
+#define( 'AUTOSAVE_INTERVAL', 300);
 #define( 'WP_MEMORY_LIMIT', '256M' );
 #define( 'FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
 #define( 'FS_CHMOD_FILE', ( 0644 & ~ umask() ) );
@@ -14,7 +14,11 @@
 #define( 'FORCE_SSL_ADMIN', true );
 #define( 'AUTOMATIC_UPDATER_DISABLED', true );
 #define( 'WP_AUTO_UPDATE_CORE', false );
-#define('WP_CACHE', true);
+#define( 'WP_CACHE', true);
+#define( 'FORCE_SSL_LOGIN', true);
+#define( 'FORCE_SSL_ADMIN', true);
+#define( 'CONCATENATE_SCRIPTS', false );
+#define( 'SCRIPT_DEBUG', true );
 
 /* Daabase configuration starts here */
 
