@@ -7,7 +7,7 @@ echo "Welcome to Automated installation of Wordpress"
 echo "**********************************************"
 echo "Date and Time:" $(date +%F_%R)
 echo "Sever Uptime is:" && uptime
-sleep 2
+sleep 1
 echo "This Script install Wordpress automatically by creating a new database."
 echo "This script assumes that Mysql 5.6 db on Debian9."
 echo "Your MySQL Version:"
@@ -110,6 +110,8 @@ cp -rf . ..
 cd ..
 git clone https://github.com/ajaykumar011/wordpress-config.git
 cp wordpress-config/wp-config.php .
+cp wordpress-config/salt.sh .
+chmod +x salt.sh
 rm -rf wordpress-config
 rm -R wordpress
 echo "------------------------------------------"
@@ -126,8 +128,8 @@ perl -pi -e "s/username_here/$dbuser/g" wp-config.php
 perl -pi -e "s/password_here/$dbpass/g" wp-config.php
 
 #Salt configuration section
-chmod +x salt.sh
 sh salt.sh
+rm -rf salt.sh
 
 echo "<?php phpinfo();?>" > $webroot/info.php
 echo "We are implementing the permission ftpuser:www-data for /var/www folder"
