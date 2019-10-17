@@ -130,6 +130,13 @@ perl -pi -e "s/password_here/$dbpass/g" wp-config.php
 #Salt configuration section
 sh salt.sh
 rm -rf salt.sh
+if [ $? -eq 0 ]; then
+    echo "Salt information is feeded into wpconfig."
+else
+    echo "SALT Keys are not feeded. please do this manually"
+fi
+sleep 1
+
 
 echo "<?php phpinfo();?>" > $webroot/info.php
 echo "We are implementing the permission ftpuser:www-data for /var/www folder"
